@@ -1,0 +1,327 @@
+ 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="Thaleka burguer Logo branca.png">
+    <title>Thaleka Burguer</title>
+
+<style>
+
+* {
+    margin: 0; /* Remove a margem padrão de todos os elementos */
+    padding: 0; /* Remove o preenchimento padrão de todos os elementos */
+    box-sizing: border-box; /* Garante que o padding e a borda sejam incluídos no tamanho total do elemento */
+}
+ 
+/* Estilo geral do corpo */
+body {
+    font-family: Arial, sans-serif; /* Define a fonte padrão do site */
+    background: rgb(229,199,250);
+      background: radial-gradient(circle, rgba(217, 163, 255, 0.729) 21%, rgba(156,188,235,1) 72%);
+}
+ 
+/* Cabeçalho principal */
+header {
+    background-color: #7030A0; /* Define a cor de fundo roxa para o cabeçalho */
+    color: #fff; /* Define a cor do texto como branco */
+    padding: 10px; /* Adiciona espaçamento interno ao redor do conteúdo do cabeçalho */
+    display: flex; /* Usa Flexbox para organizar os itens no cabeçalho */
+    justify-content: space-between; /* Espaça os itens igualmente (logo, letreiro, barra de busca) */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    flex-wrap: wrap; /* Permite que os itens do cabeçalho quebrem para a próxima linha em telas menores */
+}
+ 
+/* Estilo para o logo */
+.logo img {
+    width: 200px; /* Define a largura da imagem do logo */
+    height: auto; /* Ajusta a altura automaticamente para manter a proporção */
+}
+ 
+/* Estilo para o letreiro */
+.letreiro img {
+    width: 400px; /* Define a largura do letreiro */
+    height: auto; /* Ajusta a altura automaticamente para manter a proporção */
+}
+ 
+/* Barra de busca com lupa */
+.search-container {
+    position: relative; /* Permite posicionar a lupa dentro do contêiner */
+    width: 250px; /* Define a largura total da barra de busca */
+}
+ 
+.search-input {
+    width: 100%; /* Faz o campo de entrada ocupar toda a largura do contêiner */
+    padding: 10px 40px 10px 10px; /* Adiciona espaçamento interno; reserva espaço para a lupa */
+    border: 2px solid indigo; /* Define uma borda sólida na cor índigo */
+    border-radius: 15px; /* Adiciona cantos arredondados ao campo de entrada */
+    outline: none; /* Remove o contorno padrão ao focar no campo */
+    font-size: 14px; /* Define o tamanho do texto dentro do campo de entrada */
+}
+ 
+.search-input:focus {
+    border-color: rgb(140, 6, 158); /* Altera a cor da borda ao focar no campo */
+}
+ 
+.search-icon {
+    position: absolute; /* Posiciona a lupa dentro do contêiner da barra de busca */
+    top: 50%; /* Centraliza verticalmente a lupa */
+    right: 10px; /* Posiciona a lupa a 10px do lado direito */
+    transform: translateY(-50%); /* Ajusta a posição vertical para estar exatamente no centro */
+    font-size: 16px; /* Define o tamanho da lupa */
+    color: #6A5ACD; /* Define a cor da lupa */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+ 
+ 
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Organiza os itens do cabeçalho em coluna */
+        text-align: center; /* Centraliza o texto dentro do cabeçalho */
+    }
+ 
+    .logo img {
+        width: 200px; /* Reduz o tamanho do logo em telas menores */
+        margin-bottom: 10px; /* Adiciona espaçamento abaixo do logo */
+    }
+ 
+    .letreiro img {
+        width: 250px; /* Reduz o tamanho do letreiro em telas menores */
+        margin-bottom: 10px; /* Adiciona espaçamento abaixo do letreiro */
+    }
+ 
+    .search-container {
+        width: 100%; /* Faz a barra de busca ocupar toda a largura */
+        max-width: 00px; /* Limita a largura máxima da barra de busca */
+        margin-bottom: 10px; /* Adiciona espaçamento abaixo da barra de busca */
+    }
+ 
+    ul {
+        flex-direction: column; /* Organiza os links da navegação em coluna */
+    }
+ 
+    ul a {
+        padding: 10px; /* Reduz o espaçamento dos links */
+    }
+}
+ 
+@media (max-width: 480px) {
+    .search-input {
+        font-size: 12px; /* Reduz o tamanho do texto na barra de busca */
+    }
+ 
+    .search-icon {
+        font-size: 14px; /* Reduz o tamanho da lupa */
+    }
+ 
+    .letreiro img {
+        width: 200px; /* Reduz ainda mais o tamanho do letreiro */
+    }
+}
+ 
+
+/*essa parte é por último*/
+        @media (max-width: 768px) {
+
+        }
+
+        @media (max-width: 480px) {
+
+        }
+        
+           /* Estilização do conteúdo */
+    .content {
+        padding: 40px;
+    }
+
+    body{
+        background: rgb(229,199,250);
+        background: radial-gradient(circle, rgba(229,199,250,0.7287289915966386) 21%, rgba(156,188,235,1) 72%);
+    }
+.formulario-login{
+ 
+    background:#F3F3F3;
+    margin:auto;
+    width: 50%;
+    max-width:400px;
+    padding:30px;
+    border:1px solid rgba(0,0,0,0.2);
+    border-bottom:8px solid #7030A0;
+    border-radius:15px;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+ 
+  }
+ 
+  .formulario-login h2 {
+   
+    text-align: center;
+    margin-bottom:20px;
+    color:rgba(0,0,0,0.5);
+ 
+  }
+ 
+  .formulario-login input{
+   
+    display:block;
+    width:100%;
+    background:#f3f3f3;
+    border:none;
+    margin:30px 0;
+    padding:10px;
+    border-bottom:1px solid rgba(0,0,0,0.2);
+    outline:none;
+ 
+  }
+ 
+  .formulario-login input[type="text"]:focus , [type="password"]:focus{
+    border-bottom:2px solid rgba(0,0,0,0.9);
+  }
+ 
+  .formulario-login input[type="submit"]{
+ 
+    background:#7030A0;
+    opacity:0.9;
+    border:none;
+    border-radius:30px;
+    color:white;
+    font-size:1em;
+    cursor:pointer;
+ 
+  }
+ 
+  .formulario-login input[type="submit"]:hover{
+    opacity:1;
+    transition:.2s;
+  }
+ 
+  .formulario-login input[type="submit"]:active{
+    transform:scale(0.95);
+  }
+ 
+  .formulario-login a{
+    display:block;
+    text-align:center;
+    text-decoration:none;
+    color:rgba(0,0,0,0.5);
+  }
+ 
+  .formulario-login a:hover{
+   
+    text-decoration:underline;
+    color:rgba(0,0,0,0.8);
+ 
+  }
+ 
+  @media(max-width:780px){
+ 
+    .formualrio-login { width:75%; }
+ 
+  }
+ 
+  @media(max-width:480px){
+   
+    .formulario-login { width:95%; }
+ 
+  }
+
+     /* Estilização do conteúdo */
+     .content {
+        padding: 40px;
+    }
+   
+    /* Estilização do footer */
+    .footer {
+        position: static;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #7030A0;
+        color: #fff;
+        text-align: center;
+        padding: 15px 0;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        font-size: 20px;
+    }
+   
+    /* Estilização do conteúdo do footer */
+    .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+   
+    /* Estilização da navegação do footer */
+    .footer-nav {
+        margin-top: 10px;
+    }
+   
+    .footer-nav a {
+        color: black;
+        text-decoration: none;
+        margin: 0 50px;
+    }
+   
+    .footer-nav a:hover {
+        text-decoration: underline;
+    }
+ 
+
+</style>
+</head>
+  <body>
+
+     <!-- Cabeçalho -->
+     <header>
+      <div class="logo">
+          <img src="Thaleka buerguer Logo roxa nova.png" alt="Logo">
+      </div>
+      <div class="letreiro">
+          <img src="Letreiro fundo roxo - Thaleka Burguer mockup 2.png" alt="Letreiro">
+      </div>
+      <div class="search-container">
+          <input type="text" placeholder="Buscar..." class="search-input">
+          <span class="search-icon">🔍</span>
+      </div>
+  </header>
+   
+ 
+  <form class="formulario-login" action="#" method="post">
+ 
+    <h2>Cadastro</h2>
+ 
+        <input type="email" name="E-mail" placeholder="E-mail"/>
+        <input type="name" name="Nome" placeholder="Nome"/>
+        <input type="text" name="CPF" placeholder="CPF"/>
+        <input type="password" name="senha" placeholder="Senha"/>
+        <input type="tel" name="Telefone" placeholder="Telefone"/>
+        <input type="date" name="d-md-block" placeholder="d-md-block"/>
+        <input type="text" name="CEP" placeholder="CEP"/>
+        <input type="submit" value="Enviar" />
+        <a href="Login.html" title="Login">Login</a>
+ 
+</form>
+
+<div class="content">
+  <!-- Conteúdo principal da sua página -->
+</div>
+<footer class="footer">
+  <div class="footer-content">
+      <nav class="footer-nav">
+          <p>&copy; 2024 Thaleka Burguer. Todos os direitos reservados.</p>
+
+          <script>
+              let year = document.querySelector("#year");
+              $(document).ready(function () {
+              year.innerText = new Date().getFullYear();
+              });
+          </script>
+      </nav>
+  </div>
+
+</body>
+</html>
+ 

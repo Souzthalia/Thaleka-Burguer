@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="Thaleka burguer Logo branca.png">
+    <title>Thaleka Burguer</title>
+
+        <style>
+        /* Reset básico para remover margens e preenchimentos padrões */
+* {
+    margin: 0; /* Remove a margem padrão de todos os elementos */
+    padding: 0; /* Remove o preenchimento padrão de todos os elementos */
+    box-sizing: border-box; /* Garante que o padding e a borda sejam incluídos no tamanho total do elemento */
+}
+ 
+/* Estilo geral do corpo */
+body {
+    font-family: Arial, sans-serif; /* Define a fonte padrão do site */
+    background: rgb(229,199,250);
+      background: radial-gradient(circle, rgba(217, 163, 255, 0.729) 21%, rgba(156,188,235,1) 72%);
+}
+ 
+/* Cabeçalho principal */
+header {
+    background-color: #7030A0; /* Define a cor de fundo roxa para o cabeçalho */
+    color: #fff; /* Define a cor do texto como branco */
+    padding: 10px; /* Adiciona espaçamento interno ao redor do conteúdo do cabeçalho */
+    display: flex; /* Usa Flexbox para organizar os itens no cabeçalho */
+    justify-content: space-between; /* Espaça os itens igualmente (logo, letreiro, barra de busca) */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    flex-wrap: wrap; /* Permite que os itens do cabeçalho quebrem para a próxima linha em telas menores */
+}
+ 
+/* Estilo para o logo */
+.logo img {
+    width: 200px; /* Define a largura da imagem do logo */
+    height: auto; /* Ajusta a altura automaticamente para manter a proporção */
+}
+ 
+/* Estilo para o letreiro */
+.letreiro img {
+    width: 400px; /* Define a largura do letreiro */
+    height: auto; /* Ajusta a altura automaticamente para manter a proporção */
+}
+ 
+/* Barra de busca com lupa */
+.search-container {
+    position: relative; /* Permite posicionar a lupa dentro do contêiner */
+    width: 250px; /* Define a largura total da barra de busca */
+}
+ 
+.search-input {
+    width: 100%; /* Faz o campo de entrada ocupar toda a largura do contêiner */
+    padding: 10px 40px 10px 10px; /* Adiciona espaçamento interno; reserva espaço para a lupa */
+    border: 2px solid indigo; /* Define uma borda sólida na cor índigo */
+    border-radius: 15px; /* Adiciona cantos arredondados ao campo de entrada */
+    outline: none; /* Remove o contorno padrão ao focar no campo */
+    font-size: 14px; /* Define o tamanho do texto dentro do campo de entrada */
+}
+ 
+.search-input:focus {
+    border-color: rgb(140, 6, 158); /* Altera a cor da borda ao focar no campo */
+}
+ 
+.search-icon {
+    position: absolute; /* Posiciona a lupa dentro do contêiner da barra de busca */
+    top: 50%; /* Centraliza verticalmente a lupa */
+    right: 10px; /* Posiciona a lupa a 10px do lado direito */
+    transform: translateY(-50%); /* Ajusta a posição vertical para estar exatamente no centro */
+    font-size: 16px; /* Define o tamanho da lupa */
+    color: #6A5ACD; /* Define a cor da lupa */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+ 
+ 
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Organiza os itens do cabeçalho em coluna */
+        text-align: center; /* Centraliza o texto dentro do cabeçalho */
+    }
+ 
+    .logo img {
+        width: 200px; /* Reduz o tamanho do logo em telas menores */
+        margin-bottom: 10px; /* Adiciona espaçamento abaixo do logo */
+    }
+ 
+    .letreiro img {
+        width: 250px; /* Reduz o tamanho do letreiro em telas menores */
+        margin-bottom: 10px; /* Adiciona espaçamento abaixo do letreiro */
+    }
+ 
+    .search-container {
+        width: 100%; /* Faz a barra de busca ocupar toda a largura */
+        max-width: 00px; /* Limita a largura máxima da barra de busca */
+        margin-bottom: 10px; /* Adiciona espaçamento abaixo da barra de busca */
+    }
+ 
+    ul {
+        flex-direction: column; /* Organiza os links da navegação em coluna */
+    }
+ 
+    ul a {
+        padding: 10px; /* Reduz o espaçamento dos links */
+    }
+}
+ 
+@media (max-width: 480px) {
+    .search-input {
+        font-size: 12px; /* Reduz o tamanho do texto na barra de busca */
+    }
+ 
+    .search-icon {
+        font-size: 14px; /* Reduz o tamanho da lupa */
+    }
+ 
+    .letreiro img {
+        width: 200px; /* Reduz ainda mais o tamanho do letreiro */
+    }
+}
+ 
+
+/*essa parte é por último*/
+        @media (max-width: 768px) {
+
+        }
+
+        @media (max-width: 480px) {
+
+        }
+
+        
+    h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            margin-top: 20px;
+           
+        }
+           /* Estilização do conteúdo */
+     
+           .gallery-container {
+            display: flex; /* Usa Flexbox para organizar as galerias */
+            flex-wrap: wrap; /* Permite que as galerias quebrem para a próxima linha */
+            justify-content: center; /* Centraliza as galerias */
+            max-width: 100%; /* Limita a largura máxima da galeria */
+        }
+ 
+        div.gallery {
+            margin-top: 10px;
+            margin-bottom: 30px;
+            margin-left: 30px;
+            margin-right: 30px;
+            padding:10px;
+            width: 220px; /* Largura fixa para as galerias */
+            transition: border 0.1s; /* Transição suave na borda */
+            
+            align-items: center;
+            justify-content: center; /* Centraliza as galerias */
+        }
+ 
+ 
+        div.gallery img {
+            width: 100%; /* Imagem ocupa 100% da largura do contêiner */
+            height: 100%; /* Altura fixa para todas as imagens */
+            object-fit: cover; /* Ajusta a imagem para cobrir o espaço disponível sem distorção */
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            align-items: center;
+            justify-content: center; /* Centraliza as galerias */
+            border: solid black 2px;
+        }
+
+
+        .gallery-container3 {
+            display: flex; /* Usa Flexbox para organizar as galerias */
+            flex-wrap: wrap; /* Permite que as galerias quebrem para a próxima linha */
+            justify-content: center; /* Centraliza as galerias */
+            max-width: 100%; /* Limita a largura máxima da galeria */
+        }
+ 
+        div.gallery3 {
+            margin-top: 10px;
+            margin-bottom: 30px;
+            margin-left: 30px;
+            margin-right: 30px;
+            padding:10px;
+            width: 220px; /* Largura fixa para as galerias */
+            transition: border 0.1s; /* Transição suave na borda */
+            border-radius: 15px;
+            align-items: center;
+            justify-content: center; /* Centraliza as galerias */
+        }
+ 
+ 
+        div.gallery3 img {
+            width: 100%; /* Imagem ocupa 100% da largura do contêiner */
+            height: 100%; /* Altura fixa para todas as imagens */
+            object-fit: cover; /* Ajusta a imagem para cobrir o espaço disponível sem distorção */
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            align-items: center;
+            justify-content: center; /* Centraliza as galerias */
+            border: solid black 2px;
+        }
+
+        .gallery-container4{
+            display: flex; /* Usa Flexbox para organizar as galerias */
+            flex-wrap: wrap; /* Permite que as galerias quebrem para a próxima linha */
+            justify-content: center; /* Centraliza as galerias */
+            max-width: 100%; /* Limita a largura máxima da galeria */
+        }
+ 
+        div.gallery4 {
+            margin-top: 10px;
+            margin-bottom: 30px;
+            margin-left: 30px;
+            margin-right: 30px;
+            padding:10px;
+            width: 220px; /* Largura fixa para as galerias */
+            transition: border 0.1s; /* Transição suave na borda */
+            border-radius: 15px;
+            align-items: center;
+            justify-content: center; /* Centraliza as galerias */
+        }
+ 
+ 
+        div.gallery4 img {
+            width: 100%; /* Imagem ocupa 100% da largura do contêiner */
+            height: 100%; /* Altura fixa para todas as imagens */
+            object-fit: cover; /* Ajusta a imagem para cobrir o espaço disponível sem distorção */
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            align-items: center;
+            justify-content: center; /* Centraliza as galerias */
+            border: solid black 2px;
+        }
+
+        .gallery-container5 {
+            display: flex; /* Usa Flexbox para organizar as galerias */
+            flex-wrap: wrap; /* Permite que as galerias quebrem para a próxima linha */
+            justify-content: center; /* Centraliza as galerias */
+            max-width: 100%; /* Limita a largura máxima da galeria */
+        }
+ 
+        div.gallery5 {
+            margin-top: 10px;
+            margin-bottom: 30px;
+            margin-left: 30px;
+            margin-right: 30px;
+            padding:10px;
+            width: 220px; /* Largura fixa para as galerias */
+            transition: border 0.1s; /* Transição suave na borda */
+            border-radius: 15px;
+            align-items: center;
+            justify-content: center; /* Centraliza as galerias */
+        }
+ 
+ 
+        div.gallery5 img {
+            width: 100%; /* Imagem ocupa 100% da largura do contêiner */
+            height: 100%; /* Altura fixa para todas as imagens */
+            object-fit: cover; /* Ajusta a imagem para cobrir o espaço disponível sem distorção */
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            align-items: center;
+            justify-content: center; /* Centraliza as galerias */
+            border: solid black 2px;
+        }
+
+        .gallery-container6 {
+            display: flex; /* Usa Flexbox para organizar as galerias */
+            flex-wrap: wrap; /* Permite que as galerias quebrem para a próxima linha */
+            justify-content: center; /* Centraliza as galerias */
+            max-width: 100%; /* Limita a largura máxima da galeria */
+        }
+ 
+        div.gallery6 {
+            margin-top: 10px;
+            margin-bottom: 30px;
+            margin-left: 30px;
+            margin-right: 30px;
+            padding:10px;
+            width: 220px; /* Largura fixa para as galerias */
+            transition: border 0.1s; /* Transição suave na borda */
+            border-radius: 15px;
+            align-items: center;
+            justify-content: center; /* Centraliza as galerias */
+        }
+ 
+ 
+        div.gallery6 img {
+            width: 100%; /* Imagem ocupa 100% da largura do contêiner */
+            height: 100%; /* Altura fixa para todas as imagens */
+            object-fit: cover; /* Ajusta a imagem para cobrir o espaço disponível sem distorção */
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            align-items: center;
+            justify-content: center; /* Centraliza as galerias */
+            border: solid black 2px;
+        }
+
+        .gallery-container7 {
+            display: flex; /* Usa Flexbox para organizar as galerias */
+            flex-wrap: wrap; /* Permite que as galerias quebrem para a próxima linha */
+            justify-content: center; /* Centraliza as galerias */
+            max-width: 100%; /* Limita a largura máxima da galeria */
+        }
+ 
+        div.gallery7 {
+            margin-top: 10px;
+            margin-bottom: 30px;
+            margin-left: 30px;
+            margin-right: 30px;
+            padding:10px;
+            width: 220px; /* Largura fixa para as galerias */
+            transition: border 0.1s; /* Transição suave na borda */
+            border-radius: 15px;
+            align-items: center;
+            justify-content: center; /* Centraliza as galerias */
+        }
+ 
+ 
+        div.gallery7 img {
+            width: 100%; /* Imagem ocupa 100% da largura do contêiner */
+            height: 100%; /* Altura fixa para todas as imagens */
+            object-fit: cover; /* Ajusta a imagem para cobrir o espaço disponível sem distorção */
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            align-items: center;
+            justify-content: center; /* Centraliza as galerias */
+            border: solid black 2px;
+        }
+    
+        h3{
+           text-align: left;
+           margin-left: 200px;
+        }
+
+
+    /* Estilização do footer */
+    .footer {
+        position: static;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #7030A0;
+        color: #fff;
+        text-align: center;
+        padding: 15px 0;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        font-size: 20px;
+    }
+   
+    /* Estilização do conteúdo do footer */
+    .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+   
+    /* Estilização da navegação do footer */
+    .footer-nav {
+        margin-top: 10px;
+    }
+   
+    .footer-nav a {
+        color: black;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+   
+    .footer-nav a:hover {
+        text-decoration: underline;
+    }
+ 
+
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <img src="Thaleka buerguer Logo roxa nova.png" alt="Logo">
+        </div>
+        <div class="letreiro">
+            <img src="Letreiro fundo roxo - Thaleka Burguer mockup 2.png" alt="Letreiro">
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Buscar..." class="search-input">
+            <span class="search-icon">🔍</span>
+        </div>
+    </header>
+
+    <h1>Cardápio</h1>
+ 
+    <h3>Lanches</h3>
+    <div class="gallery-container">
+       
+        <div class="gallery">
+            <a target="_blank" href="Lançamentos 1.jpg">
+                <img src="Lançamentos 1.jpg" alt="Imagem 1">
+            </a>
+        </div>
+    
+        <div class="gallery">
+            <a target="_blank" href="Lançamentos 2.jpg">
+                <img src="Lançamentos 2.jpg" alt="Imagem 2">
+            </a>
+        </div>
+    
+        <div class="gallery">
+            <a target="_blank" href="Lançamentos 3.jpg">
+                <img src="Lançamentos 3.jpg" alt="Imagem 3">
+            </a>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="Lançamentos 3.jpg">
+                <img src="Lançamentos 3.jpg" alt="Imagem 3">
+            </a>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="Lançamentos 3.jpg">
+                <img src="Lançamentos 3.jpg" alt="Imagem 3">
+            </a>
+        </div>
+    </div>
+
+        <h3>Combos</h3>
+        <div class="gallery-container3">   
+            <div class="gallery3">
+                <a target="_blank" href="pexels-jeferson-gomes-24831766-15523378.jpg">
+                    <img src="pexels-jeferson-gomes-24831766-15523378.jpg" alt="Imagem 1">
+                </a>
+            </div>
+        
+            <div class="gallery3">
+                <a target="_blank" href="pexels-jeferson-gomes-24831766-15523388.jpg">
+                    <img src="pexels-jeferson-gomes-24831766-15523388.jpg" alt="Imagem 2">
+                </a>
+            </div>
+        
+            <div class="gallery3">
+                <a target="_blank" href="pexels-jeferson-gomes-24831766-15523389.jpg">
+                    <img src="pexels-jeferson-gomes-24831766-15523389.jpg" alt="Imagem 3">
+                </a>
+            </div>
+
+            <div class="gallery3">
+                <a target="_blank" href="pexels-jeferson-gomes-24831766-15523391.jpg">
+                    <img src="pexels-jeferson-gomes-24831766-15523391.jpg" alt="Imagem 3">
+                </a>
+            </div>
+    
+            <div class="gallery3">
+                <a target="_blank" href="pexels-jeferson-gomes-24831766-15523392.jpg">
+                    <img src="pexels-jeferson-gomes-24831766-15523392.jpg" alt="Imagem 3">
+                </a>
+            </div>
+        </div>
+
+            <h3>Acompanhamentos</h3>
+            <div class="gallery-container4">   
+                <div class="gallery4">
+                    <a target="_blank" href="Lançamentos 4.jpg">
+                        <img src="Lançamentos 4.jpg" alt="Imagem 1">
+                    </a>
+                </div>
+            
+                <div class="gallery4">
+                    <a target="_blank" href="Lançamentos 5.jpg">
+                        <img src="Lançamentos 5.jpg" alt="Imagem 2">
+                    </a>
+                </div>
+            
+                <div class="gallery4">
+                    <a target="_blank" href="Lançamentos 6.jpg">
+                        <img src="Lançamentos 6.jpg" alt="Imagem 3">
+                    </a>
+                </div>
+
+                <div class="gallery4">
+                    <a target="_blank" href="Lançamentos 3.jpg">
+                        <img src="Lançamentos 3.jpg" alt="Imagem 3">
+                    </a>
+                </div>
+        
+                <div class="gallery4">
+                    <a target="_blank" href="Lançamentos 3.jpg">
+                        <img src="Lançamentos 3.jpg" alt="Imagem 3">
+                    </a>
+                </div>
+            </div>
+
+                <h3>Porções</h3>
+                <div class="gallery-container5">   
+                    <div class="gallery5">
+                        <a target="_blank" href="Lançamentos 4.jpg">
+                            <img src="Lançamentos 4.jpg" alt="Imagem 1">
+                        </a>
+                    </div>
+                
+                    <div class="gallery5">
+                        <a target="_blank" href="Lançamentos 5.jpg">
+                            <img src="Lançamentos 5.jpg" alt="Imagem 2">
+                        </a>
+                    </div>
+                
+                    <div class="gallery5">
+                        <a target="_blank" href="Lançamentos 6.jpg">
+                            <img src="Lançamentos 6.jpg" alt="Imagem 3">
+                        </a>
+                    </div>
+
+                    <div class="gallery5">
+                        <a target="_blank" href="Lançamentos 3.jpg">
+                            <img src="Lançamentos 3.jpg" alt="Imagem 3">
+                        </a>
+                    </div>
+            
+                    <div class="gallery5">
+                        <a target="_blank" href="Lançamentos 3.jpg">
+                            <img src="Lançamentos 3.jpg" alt="Imagem 3">
+                        </a>
+                    </div>
+                </div>
+
+                    <h3>Bebidas</h3>
+                    <div class="gallery-container6">   
+                        <div class="gallery6">
+                            <a target="_blank" href="Lançamentos 4.jpg">
+                                <img src="Lançamentos 4.jpg" alt="Imagem 1">
+                            </a>
+                        </div>
+                    
+                        <div class="gallery6">
+                            <a target="_blank" href="Lançamentos 5.jpg">
+                                <img src="Lançamentos 5.jpg" alt="Imagem 2">
+                            </a>
+                        </div>
+                    
+                        <div class="gallery6">
+                            <a target="_blank" href="Lançamentos 6.jpg">
+                                <img src="Lançamentos 6.jpg" alt="Imagem 3">
+                            </a>
+                        </div>
+
+                        <div class="gallery6">
+                            <a target="_blank" href="Lançamentos 3.jpg">
+                                <img src="Lançamentos 3.jpg" alt="Imagem 3">
+                            </a>
+                        </div>
+                
+                        <div class="gallery6">
+                            <a target="_blank" href="Lançamentos 3.jpg">
+                                <img src="Lançamentos 3.jpg" alt="Imagem 3">
+                            </a>
+                        </div>
+                    </div>
+
+                        <h3>Sobremesas</h3>
+                        <div class="gallery-container7">
+                            <div class="gallery">
+                                <a target="_blank" href="Lançamentos 1.jpg">
+                                    <img src="Lançamentos 1.jpg" alt="Imagem 1">
+                                </a>
+                            </div>
+                        
+                            <div class="gallery7">
+                                <a target="_blank" href="Lançamentos 2.jpg">
+                                    <img src="Lançamentos 2.jpg" alt="Imagem 2">
+                                </a>
+                            </div>
+                        
+                            <div class="gallery7">
+                                <a target="_blank" href="Lançamentos 3.jpg">
+                                    <img src="Lançamentos 3.jpg" alt="Imagem 3">
+                                </a>
+                            </div>
+                    
+                            <div class="gallery7">
+                                <a target="_blank" href="Lançamentos 3.jpg">
+                                    <img src="Lançamentos 3.jpg" alt="Imagem 3">
+                                </a>
+                            </div>
+                    
+                            <div class="gallery7">
+                                <a target="_blank" href="Lançamentos 3.jpg">
+                                    <img src="Lançamentos 3.jpg" alt="Imagem 3">
+                                </a>
+                            </div>
+                        </div>
+  
+
+
+    <div class="content">
+        <!-- Conteúdo principal da sua página -->
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <nav class="footer-nav">
+                <p>&copy; 2024 Thaleka Burguer. Todos os direitos reservados.</p>
+ 
+                <script>
+                    let year = document.querySelector("#year");
+                    $(document).ready(function () {
+                    year.innerText = new Date().getFullYear();
+                    });
+                </script>
+            </nav>
+        </div>
+
+</body>
+</html>
+ 
